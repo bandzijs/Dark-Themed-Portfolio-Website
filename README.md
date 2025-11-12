@@ -34,7 +34,7 @@
      npm run build
      ```
 
-  The build output will be in the `build` directory.
+  The build output will be in the `dist` directory.
 
   ## Deployment
 
@@ -49,19 +49,19 @@
   1. Push your code to GitHub
   2. Import the project in Netlify
   3. Build command: `npm run build`
-  4. Publish directory: `build`
+  4. Publish directory: `dist`
 
   ### GitHub Pages
   1. Install `gh-pages`: `npm install --save-dev gh-pages`
   2. Add to `package.json` scripts:
      ```json
      "predeploy": "npm run build",
-     "deploy": "gh-pages -d build"
+     "deploy": "gh-pages -d dist"
      ```
   3. Run `npm run deploy`
 
   ### Other Static Hosts
-  - Upload the contents of the `build` directory to your hosting service
+  - Upload the contents of the `dist` directory to your hosting service
   - Ensure your server is configured to serve `index.html` for all routes (SPA routing)
 
   ## Technologies Used
