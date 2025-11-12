@@ -1,5 +1,6 @@
 import { Linkedin, Github, Mail } from "lucide-react";
 import { Button } from "./ui/button";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -39,8 +40,12 @@ export function Hero() {
           <div className="relative inline-block mt-12">
             {/* Profile Image */}
             <div className="relative w-64 h-64 mx-auto">
-              <div className="w-full h-full bg-zinc-800 rounded-lg flex items-center justify-center">
-                <span className="text-zinc-600">Photo</span>
+              <div className="w-full h-full rounded-lg overflow-hidden border-2 border-zinc-800 shadow-lg bg-zinc-800">
+                <ImageWithFallback
+                  src="/profile.jpg"
+                  alt="Emīls Ronis - Full Stack Developer"
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               {/* Floating skill tags */}
